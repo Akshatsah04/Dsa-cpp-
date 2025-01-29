@@ -4,12 +4,12 @@ using namespace std;
 
 int main(){
     vector<int> num={2 , 7 , 11 , 15};
-    int t =9;
+    int t =18;
 
     int st = 0;
     int end = num.size()-1;
 
-    while (num[st]+num[end]==t){
+    while (st<end){
         if(num[st]+num[end]>t){
             end--;
         }
@@ -18,6 +18,7 @@ int main(){
         }
         else{
             cout<<st<<endl<<end<<endl;
+            return 0;   
         }
     }
     return 0;
