@@ -8,7 +8,7 @@ int main(){
     int ans;
     
     for(int i =0 ; i<7 ; i++){
-        int maxnum=0;
+        int maxnum=1;
         for(int j=i+1 ;j<7 ;j++){
             if(ele[i]==ele[j]){
                 maxnum++;
