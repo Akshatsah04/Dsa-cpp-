@@ -9,7 +9,7 @@ int main(){
     digits.push_back(2);
     digits.push_back(3);
     digits.push_back(4);
-    digits.push_back(5);
+    digits.push_back(6);
 
     int num=0;
     bool wh = true;
@@ -36,20 +36,24 @@ int main(){
         }
         // cout<<num<<endl;
         num=num+1;
+        int sub=0;
         // cout<<num<<endl;
         for(int i=0;i<digits.size();i++){
             float power =pow(10,digits.size()-i-1);
             int val3=static_cast<int>(power);
+            
             int val2= num/val3;
-            digits[i]=num/val3;
-            cout<<val2<<endl;
+            digits[i]=val2-sub*10;
+            sub=val2;
+            
+            // cout<<val2<<endl;
         }
     }
 
 
         
-    // for (int i = 0; i < digits.size(); i++){
-    //     cout<<digits[i]<<" ";
-    // } 
+    for (int i = 0; i < digits.size(); i++){
+        cout<<digits[i]<<" ";
+    } 
     return 0;
 }
