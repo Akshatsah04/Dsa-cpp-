@@ -20,6 +20,7 @@ int main(){
     for(int i=0;i<digits.size();i++){
         if(digits[i]!=9){
             wh= false;
+            break;
         }
     }
 
@@ -31,25 +32,16 @@ int main(){
         }
         digits.push_back(0);
     }else{
-        for(int i=0; i<digits.size();i++){
-            int val =digits.size()-i-1;
-            float power=pow(10,val);
-            // cout<<power<<endl;
-            num+=digits[i]*power;
-        }
-        // cout<<num<<endl;
-        num=num+1;
-        int sub=0;
-        // cout<<num<<endl;
-        for(int i=0;i<digits.size();i++){
-            float power =pow(10,digits.size()-i-1);
-            int val3=static_cast<int>(power);
-            
-            int val2= num/val3;
-            digits[i]=val2-sub*10;
-            sub=val2;
-            
-            // cout<<val2<<endl;
+        int carry=1;
+        for(int i=digits.size()-1 ; i>=0 ; i--){
+            digits[i]+=carry;
+            if(digits[i]==10){
+                digits[i]=0;
+                carry=1;
+            }else{
+                carry =0;
+                break;
+            }
         }
     }
 
@@ -60,3 +52,4 @@ int main(){
     } 
     return 0;
 }
+
