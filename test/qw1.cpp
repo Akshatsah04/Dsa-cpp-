@@ -1,14 +1,22 @@
 #include<iostream>
+#include<vector>
 using namespace std;
 
 int main(){
-    int a =11;
-    int b =12;
+    vector<int> tr;
+    int n;
+    cin>>n;
+    for(int i=0;i<n ; i++){
+        int a ;
+        cin>>a;
+        tr.push_back(a);
 
-    swap(a ,b);
+    }
+    for(int i=0;i<n ; i++){
+        cout<<tr[i];
 
-    cout<<a<<endl;
-    cout<<b<<endl;
+    }
+    
 
     return 0;
 }
