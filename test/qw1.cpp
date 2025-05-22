@@ -8,22 +8,13 @@ int main(){
    
    
    int i,j;
-   int n=4;
+   int n=48;
    char ch=65;
+   string str="akshat";
 
-   for (int i = 0; i < n; i++)
-   {
-    ch=65+i;
-    for (int j = 0; j <= i; j++)
-    {
-        cout<<ch<<" ";
-        ch-=1;
-    }
-    
-    cout<<endl;
-    
-   }
-   
+   str[0]=n;
+
+   cout<<str<<endl;
     
 
     return 0;
